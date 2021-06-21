@@ -6,7 +6,7 @@ continue: 當執行到這一行時, 開始下一個for迴圈, 所以3.表示i小
 break: 當執行到這一行時, 終止if/整個for迴圈, 因此當i大於10時, 會直接跳出for迴圈, 不會到達print  
 
 
-<pre><code>
+<pre class="brush:python"><code>
 print("start")
 for i in range(50):
     pass # 1.
