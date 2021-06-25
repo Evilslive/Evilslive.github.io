@@ -3,7 +3,7 @@
 
 ### 學習Python的心路歷程
 
-[流程控制](control-flow.md)
+[流程控制](journey.html)
 
 ### 踏入自然語言處理
 
