@@ -1,11 +1,7 @@
 
 
 
-### 學習Python的心路歷程
+### [學習Python的心路歷程](journey.html)
 
-[流程控制](journey.html)
-
-### 踏入自然語言處理
-
-[NLP](https://evilslive.github.io/JohnHsieh)
+### [踏入自然語言處理](https://evilslive.github.io/JohnHsieh)
 
