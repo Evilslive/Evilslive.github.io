@@ -69,8 +69,8 @@ del x[0] # 'a'
 del x[-2] # 'd'
 x.pop(0) # 'b'
 x.pop() # 'e'
-x.remove('c')
-x.clear() # 清空
+x.remove('c') # []
+x.clear() # 清空 []
 ## 查
 y.index('Tom') # 0
 y.index('Bill',3,4), # ValueError: 'Bill' is not in list
