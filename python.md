@@ -127,7 +127,13 @@ y.issuperset(x): 超集判斷
         __ge__(self, other)	To get called on comparison using >= operator.
         
 
+## 修飾 Decorator
 
+前半段表現不一樣但後半段一樣, 用修飾(不同, 同)
+
+## 繼承 Inheritance
+
+前半段表現一樣但後半段不一樣, 用繼承(同, 不同)
 
 
 
