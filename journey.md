@@ -9,18 +9,18 @@ break: 當執行到這一行時, 終止if/整個for迴圈, 因此當i大於10時
 
 
 
-print("start")
-for i in range(50):
-    pass # 1.
-    if i % 2 == 0:
-        pass # 2.
-    else:
-        if i < 10:
-            continue # 3.
-        if i > 10:
-            break # 4.
-    print(i) # 注意縮排的位置
-print("end")
+        print("start")
+        for i in range(50):
+            pass # 1.
+            if i % 2 == 0:
+                pass # 2.
+            else:
+                if i < 10:
+                    continue # 3.
+                if i > 10:
+                    break # 4.
+            print(i) # 注意縮排的位置
+        print("end")
 
 
 輸出結果:
