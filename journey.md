@@ -42,5 +42,8 @@ sigmoid: f(x) = 1/(1+e^x), 0 to 1
 tanh: , -1 to 1
 relu: max(0, x), 0 to inf
 leak relu: 
-            
-
+       
+Magic Method
+__new__
+__init__
+__call__
