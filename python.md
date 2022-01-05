@@ -79,6 +79,12 @@ y.count('Bill') # 1
 
 ```
 
+## Method
+### @classmethod, 類方法
+
+
+### @staticmethod, 靜態方法
+
 ## Magic Methods
 ### Initialization and Construction
 
