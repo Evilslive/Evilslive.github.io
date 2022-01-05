@@ -29,13 +29,6 @@
         > 10
         > end
 
-## Activation Function
-        linear: f(x) = x, -inf to inf 
-        sigmoid: f(x) = 1/(1+e^x), 0 to 1 
-        tanh: , -1 to 1 
-        relu: max(0, x), 0 to inf 
-        leaky relu:
-
 ## Variable Argument Functions
 ### 可變參數 
 Argument(*args): 將參數收蒐集到tuple中 
