@@ -1,12 +1,9 @@
 
 ### Control Flow
-基本流程控制三個指令 pass, continue, break 
-#### pass
-執行另一個區塊, 所以通常會搭配if...else, 所以在位置1.時無實質功能, 2.表示當i被2整除時, 會執行else 
-#### continue
-當執行到這一行時, 開始下一個for迴圈, 所以3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
-#### break
-當執行到這一行時, 終止if/整個for迴圈, 因此當i大於10時, 會直接跳出for迴圈, 不會到達print
+#### 流程控制
+- ___pass___ &emsp; 執行另一個區塊, 所以通常會搭配if...else；在位置1.時無實質功能, 2.表示當i被2整除時, 會執行else 
+- ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
+- ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print
 ```python
 print("start")
 for i in range(50):
@@ -15,19 +12,19 @@ for i in range(50):
     else:
         if i < 10: continue # 3.
         if i > 10: break # 4.
-    print(i) # 注意縮排的位置
+    print(i, end=' > ') # 注意縮排的位置
 print("end")
 ```
-結果會輸出 start > 0 > 2 > 4 > 6 > 8 > 10 > end
+output：
+
+    start > 0 > 2 > 4 > 6 > 8 > 10 > end
 
 ### Variable Argument Functions
 #### 可變參數 
-Argument(*args): 將參數收蒐集到tuple中 
-Keyword Argument(**kwargs): 將參數收蒐集到dict中
+- ___\*args___ &emsp; Arguments: 將參數收蒐集到tuple中 
+- ___\*\*kwargs___ &emsp; Keyword Arguments: 將參數收蒐集到dict中
 
-#### 順序問題
-*args then **kwargs
-因為在函式(df)中, 前頭要是開放參數, 而預設參數放在後面, 使得函式呼叫時可以直接丟數value而不用先定義key
+>\*args then \*\*kwargs &emsp; 在 ___def___ 函式中, 需先放開放參數, 再接預設參數
 
 ### Set
 #### 新增
@@ -80,9 +77,9 @@ y.count('Bill') # 1
 ```
 
 ### Method
-##### @classmethod, 類方法
+@classmethod, 類方法
 
-### @staticmethod, 靜態方法
+@staticmethod, 靜態方法
 
 ### Magic Methods
 #### Initialization and Construction
