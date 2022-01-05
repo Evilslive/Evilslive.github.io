@@ -59,19 +59,24 @@ y.issuperset(x): 超集判斷
 ## List
 ```python
 x = ['a','b']
-# 增加
+y = ['Tom','Bill']
+## 增加
 x += ['c'] 
 x.append('d')
 x.extend(['e']) # x = ['a','b','c','d','e']
-# 刪除
+## 刪除
 del x[0] # 'a'
 del x[-2] # 'd'
 x.pop(0) # 'b'
 x.pop() # 'e'
 x.remove('c')
 x.clear() # 清空
-# 查
-# 改
+## 查
+y.index('Tom') # 0
+y.index('Bill',3,4), # ValueError: 'Bill' is not in list
+y.count('Bill') # 1
+## 改
+
 ```
 
 ## Magic Methods
