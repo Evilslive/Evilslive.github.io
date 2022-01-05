@@ -56,6 +56,24 @@ x ^ y : 對稱差集, 包含x, y不重複的元素
 x.issubset(y): 子集判斷, x是否是y的子集
 y.issuperset(x): 超集判斷
 ```
+## List
+```python
+x = ['a','b']
+# 增加
+x += ['c'] 
+x.append('d')
+x.extend(['e']) # x = ['a','b','c','d','e']
+# 刪除
+del x[0] # 'a'
+del x[-2] # 'd'
+x.pop(0) # 'b'
+x.pop() # 'e'
+x.remove('c')
+x.clear() # 清空
+# 查
+# 改
+```
+
 ## Magic Methods
 ### Initialization and Construction
 
