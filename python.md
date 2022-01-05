@@ -1,9 +1,9 @@
 
 ### Control Flow
 #### 流程控制
-- ___pass___ &emsp; 執行另一個區塊, 所以通常會搭配if...else；在位置1.時無實質功能, 2.表示當i被2整除時, 會執行else 
-- ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
-- ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print
++ ___pass___ &emsp; 執行另一個區塊, 所以通常會搭配if...else；在位置1.時無實質功能, 2.表示當i被2整除時, 會執行else 
++ ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
++ ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print
 ```python
 print("start")
 for i in range(50):
@@ -19,10 +19,10 @@ output：
 
     start > 0 > 2 > 4 > 6 > 8 > 10 > end
 
-### Variable Argument Functions
+### Variable Argument
 #### 可變參數 
-- ___\*args___ &emsp; Arguments: 將參數收蒐集到tuple中 
-- ___\*\*kwargs___ &emsp; Keyword Arguments: 將參數收蒐集到dict中
++ ___\*args___ &emsp; Arguments: 將參數收蒐集到tuple中 
++ ___\*\*kwargs___ &emsp; Keyword Arguments: 將參數收蒐集到dict中
 
 >\*args then \*\*kwargs &emsp; 在 ___def___ 函式中, 需先放開放參數, 再接預設參數
 
@@ -83,9 +83,11 @@ y.count('Bill') # 1
 
 ### Magic Methods
 #### Initialization and Construction
++ \_\_new\_\_(cls, other) &emsp; To get called in an object's instantiation.
++ \_\_init\_\_(self, other) &emsp; To get called by the __new__ method.
++ \_\_call\_\_(self, other) &emsp; 
 
-        __new__(cls, other)	To get called in an object's instantiation.
-        __init__(self, other)	To get called by the __new__ method.
+<!--
         __del__(self)	Destructor method.
 #### Unary operators and functions
 
@@ -150,7 +152,7 @@ y.count('Bill') # 1
         __eq__(self, other)	To get called on comparison using == operator.
         __ne__(self, other)	To get called on comparison using != operator.
         __ge__(self, other)	To get called on comparison using >= operator.
-        
+-->
 
 ### Decorator
 
