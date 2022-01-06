@@ -26,6 +26,9 @@ output：
 
 >\*args then \*\*kwargs &emsp; 在 ___def___ 函式中, 需先放開放參數, 再接預設參數
 
+### Copy
+由append、extend所帶出的議題, 探討深拷貝、淺拷貝
+
 ### Set
 #### 新增
 ```python
