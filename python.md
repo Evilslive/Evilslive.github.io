@@ -78,6 +78,7 @@ y.count('Bill') # 1
 ## 改
 
 ```
+> 查找速度 dict > list
 
 ### Method
 @classmethod, 類方法
