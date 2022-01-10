@@ -58,27 +58,56 @@ x.issubset(y): 子集判斷, x是否是y的子集
 y.issuperset(x): 超集判斷
 ```
 ### List
+__init__
+
 ```python
 x = ['a','b']
 y = ['Tom','Bill']
-## 增加
+```
+#### 增
+
+```python
 x += ['c'] 
 x.append('d')
 x.extend(['e']) # x = ['a','b','c','d','e']
-## 刪除
+```
+#### 刪
+
+```python
 del x[0] # 'a'
 del x[-2] # 'd'
 x.pop(0) # 'b'
 x.pop() # 'e'
 x.remove('c') # []
 x.clear() # 清空 []
-## 查
+```
+#### 查
+
+```python
 y.index('Tom') # 0
 y.index('Bill',3,4), # ValueError: 'Bill' is not in list
 y.count('Bill') # 1
-## 改
-
 ```
+#### 改
+
+#### 格式轉換
+***numpy.ndarray***
+```python
+listA = array.tolist()
+array = numpy.array(listA)
+```
+***pandas.Series***
+```python
+listA = series.tolist()
+series = pandas.series(listA)
+```
+np <-> pd
+```python
+series = pandas.Series(array)
+array = series.to_numpy()
+array = series.values
+```
+
 > 查找速度 dict > list
 
 ### Method
