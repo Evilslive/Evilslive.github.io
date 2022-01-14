@@ -90,6 +90,9 @@ y.count('Bill') # 1
 ```
 #### 改
 
+```python
+```
+
 #### 格式轉換
 ***numpy.ndarray***
 ```python
