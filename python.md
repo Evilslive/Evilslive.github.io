@@ -202,6 +202,11 @@ array = series.values
 
 前半段表現一樣但後半段不一樣, 用繼承(同, 不同)
 
+### Regular Expression
+好用的正則表達式
++ 保留中文字
++ 保留數字
++ 保留英文字
 
 
 
