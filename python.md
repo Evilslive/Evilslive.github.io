@@ -124,7 +124,7 @@ array = series.values
 *\_\_init__(self, other)* &emsp; 被*\_\_new__*方法調用
 *\_\_call__(self, other)* &emsp; 呼叫實例化對象時調用
 
-*\_\_dir__()*  &emsp; 列出對象的所有屬性、方法
+*\_\_dir__(self)*  &emsp; 列出對象的所有屬性、方法, 如:dir()
 
 ```python
 class Cola:
