@@ -123,6 +123,26 @@ array = series.values
 *\_\_new__(cls, other)* &emsp; 當對象實例化時調用
 *\_\_init__(self, other)* &emsp; 被*\_\_new__*方法調用
 *\_\_call__(self, other)* &emsp; 呼叫實例化對象時調用
+
+*\_\_dir__()*  &emsp; 列出對象的所有屬性、方法
+
+```python
+class Cola:
+    PRICE = 1.01
+    def __init__(self):
+        pass
+    def promotion1(self):
+        print('50% off second item !')
+    def promotion2(self):
+        print('Buy one get one free !')
+
+can = Cola()
+print(can.__dir__())
+```
+output:
+```python
+['__module__', 'PRICE', '__init__', 'promotion1', 'promotion2', ... ] # 其他魔術方法
+```
 *\_\_getitem__(self, key)* &emsp; 實例化為*dict*對象
 
 ```python
