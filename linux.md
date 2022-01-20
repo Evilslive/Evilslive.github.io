@@ -2,7 +2,24 @@
 
 ## Linux 學習紀錄: ubuntu 20.04 mainly 
 
-grub
+### 開機引導修復
 
-開機引導
+在grub 2環境下, 一一測試每個分隔槽, 直到找到含有路徑 /boot/grub 的磁區, 表示 ubuntu 系統安裝在此
+```grub
+> ls
+（hd0） （hd0，msdos9） （hd0，msdos8） （hd0，msdos7） （hd0，msdos6） ...
+> ls (hd0) /boot/grub
+> ls (hd0, msdos9) /boot/grub 
+...
+```
+找到後重新指定路徑
+
+```grub
+> set root =（hd0，msdos8）
+> set prefix=（hd0，msdos8）/boot/grub
+> insmod normal 
+> normal
+```
+啟動後, 再到系統內更新grub
+
 
