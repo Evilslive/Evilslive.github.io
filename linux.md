@@ -18,9 +18,13 @@ ERROR MSG NOT FOUND !
 ```grub
 > set root =（hd0，msdos8）
 > set prefix=（hd0，msdos8）/boot/grub
-> insmod normal 
+> insmod normal
 > normal
 ```
+> insmod: install module
+
 啟動後, 再到系統內更新grub
+
+
 
 
