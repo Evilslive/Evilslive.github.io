@@ -4,15 +4,16 @@
 
 ### 開機引導修復
 
-在grub 2環境下, 一一測試每個分隔槽, 直到找到含有路徑 /boot/grub 的磁區, 表示 ubuntu 系統安裝在此
+在grub 2環境下, 一一測試每個分隔槽, 直到找到含有路徑 /boot/grub 的磁區, 表示系統安裝在此
 ```grub
 > ls
 （hd0） （hd0，msdos9） （hd0，msdos8） （hd0，msdos7） （hd0，msdos6） ...
 > ls (hd0) /boot/grub
+ERROR MSG NOT FOUND ! 
 > ls (hd0, msdos9) /boot/grub 
 ...
 ```
-找到後重新指定路徑
+找到後重新指向, 並啟動(normal)
 
 ```grub
 > set root =（hd0，msdos8）
