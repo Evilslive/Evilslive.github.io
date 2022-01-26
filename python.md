@@ -1,5 +1,7 @@
 ## Python Notes
-### Control Flow
+<details>
+<summary> Control Flow </summary>
+    
 #### 流程控制
 + ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 
 + ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
@@ -19,18 +21,25 @@ print("end")
 output：
 
     start > 0 > 2 > 4 > 6 > 8 > 10 > end
+</details>
+<details>
+<summary>Variable Argument</summary>
 
-### Variable Argument
 #### 可變參數 
+    
 + ___\*args___ &emsp; Arguments: 將參數收蒐集到tuple中 
 + ___\*\*kwargs___ &emsp; Keyword Arguments: 將參數收蒐集到dict中
 
 >\*args then \*\*kwargs &emsp; 在 ___def___ 函式中, 需先放開放參數, 再接預設參數
+</details>
+<details>
+<summary> Copy </summary>
 
-### Copy
 由append、extend所帶出的議題, 探討深拷貝、淺拷貝
-
-### Set
+</details>
+<details>
+<summary>Set</summary>
+    
 #### 新增
 ```python
 y= set(1) or x= {2} # 建立集合
@@ -57,7 +66,10 @@ x ^ y : 對稱差集, 包含x, y不重複的元素
 x.issubset(y): 子集判斷, x是否是y的子集
 y.issuperset(x): 超集判斷
 ```
-### List
+</details>
+<details>
+<summary>List</summary>
+    
 __init__
 
 ```python
@@ -92,7 +104,10 @@ y.count('Bill') # 1
 
 ```python
 ```
-
+</details> 
+<details>
+<summary>Type conversion</summary>
+    
 #### 格式轉換
 ***numpy.ndarray***
 ```python
@@ -112,13 +127,17 @@ array = series.values
 ```
 
 > 查找速度 dict > list
-
-### Method
+</details>    
+<details>
+<summary> Method </summary>
+    
 @classmethod, 類方法
 
 @staticmethod, 靜態方法
-
-### Magic Methods
+</details>
+<details>
+<summary> Magic Methods </summary>
+    
 #### Initialization and Construction
 *\_\_new__(cls, other)* &emsp; 當對象實例化時調用
 *\_\_init__(self, other)* &emsp; 被*\_\_new__*方法調用
@@ -159,19 +178,23 @@ where_is = CountingStars('Hello, world !!')
 print(where_is['o'])
 ```
 *\_\_iter__* &emsp; 迭代
-
-### Decorator
+</details>
+<details>
+<summary> Decorator </summary>
 
 前半段表現不一樣但後半段一樣, 用修飾(不同, 同)
 ```python
-
+    還沒什麼心得
 ```
-
-### Inheritance
+</details>
+<details>
+<summary> Inheritance </summary>
 
 前半段表現一樣但後半段不一樣, 用繼承(同, 不同)
-
-
+```python
+    還沒什麼心得
+```
+</details>
 
 
 
