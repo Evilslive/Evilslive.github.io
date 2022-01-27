@@ -1,15 +1,15 @@
 ## Python Notes
 <details>
 <summary>Control Flow</summary>
-
-<div>
    
-#### 流程控制
-+ ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 
-+ ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
-+ ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print
+<h4> 流程控制 </h4>
+<ul>
+   <li> ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 </li>
+   <li> ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print </li>
+   <li> ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print </li>
+</ul>
 
-```python
+<pre>
 print("start")
 for i in range(50):
     pass # 1.
@@ -19,11 +19,12 @@ for i in range(50):
         if i > 10: break # 4.
     print(i, end=' > ') # 注意縮排的位置
 print("end")
-```
+</pre>
+   
 output：
-
+<pre>
     start > 0 > 2 > 4 > 6 > 8 > 10 > end
-</div>
+</pre>
 </details>
     
 <details>
