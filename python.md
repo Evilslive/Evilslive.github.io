@@ -1,6 +1,8 @@
 ## Python Notes
 <details>
 <summary>Control Flow</summary>
+
+<div>
    
 #### 流程控制
 + ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 
@@ -21,7 +23,7 @@ print("end")
 output：
 
     start > 0 > 2 > 4 > 6 > 8 > 10 > end
-
+</div>
 </details>
     
 <details>
