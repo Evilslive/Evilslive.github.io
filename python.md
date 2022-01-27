@@ -1,9 +1,7 @@
 ## Python Notes
 <details>
-    <summary></summary>
-
-### Control Flow
-    
+<summary>Control Flow</summary>
+   
 #### 流程控制
 + ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 
 + ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print 
@@ -23,7 +21,9 @@ print("end")
 output：
 
     start > 0 > 2 > 4 > 6 > 8 > 10 > end
+
 </details>
+    
 <details>
 <summary>Variable Argument</summary>
 
@@ -33,12 +33,16 @@ output：
 + ___\*\*kwargs___ &emsp; Keyword Arguments: 將參數收蒐集到dict中
 
 >\*args then \*\*kwargs &emsp; 在 ___def___ 函式中, 需先放開放參數, 再接預設參數
+
 </details>
+    
 <details>
 <summary> Copy </summary>
 
 由append、extend所帶出的議題, 探討深拷貝、淺拷貝
+
 </details>
+    
 <details>
 <summary>Set</summary>
     
@@ -68,7 +72,9 @@ x ^ y : 對稱差集, 包含x, y不重複的元素
 x.issubset(y): 子集判斷, x是否是y的子集
 y.issuperset(x): 超集判斷
 ```
+    
 </details>
+    
 <details>
 <summary>List</summary>
     
@@ -106,7 +112,9 @@ y.count('Bill') # 1
 
 ```python
 ```
-</details> 
+    
+</details>
+    
 <details>
 <summary>Type conversion</summary>
     
@@ -129,14 +137,18 @@ array = series.values
 ```
 
 > 查找速度 dict > list
-</details>    
+
+</details>   
+    
 <details>
 <summary> Method </summary>
     
 @classmethod, 類方法
 
 @staticmethod, 靜態方法
+
 </details>
+    
 <details>
 <summary> Magic Methods </summary>
     
@@ -180,7 +192,9 @@ where_is = CountingStars('Hello, world !!')
 print(where_is['o'])
 ```
 *\_\_iter__* &emsp; 迭代
+
 </details>
+
 <details>
 <summary> Decorator </summary>
 
@@ -196,6 +210,7 @@ print(where_is['o'])
 ```python
     還沒什麼心得
 ```
+    
 </details>
 
 
