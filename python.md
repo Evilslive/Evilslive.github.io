@@ -1,16 +1,13 @@
 ## Python Notes
-<details>
-<summary>Control Flow</summary>
-   
-<h4> 流程控制 </h4>
-<ul>
-   <li> ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 </li>
-   <li> ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print </li>
-   <li> ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print </li>
-</ul>
 
-<pre>
-print("start")
+### Control Flow
+流程控制
++ ___pass___ &emsp; 執行這一行時不動作, 所以通常會搭配if...else, 一個條件動作、另一個pass；在位置1.時無實質功能, 2.表示當i被2整除時, 不做任何事 </li>
++ ___continue___ &emsp; 當執行到這一行時, 開始下一個for迴圈；3.表示i小於10時, 直接跳到for迴圈開始下一個i, 不會到達print </li>
++ ___break___ &emsp; 當執行到這一行時, 終止if/整個for迴圈；當i大於10時, 會直接跳出for迴圈, 不會到達print </li>
+
+```python
+print("start", end=" > ")
 for i in range(50):
     pass # 1.
     if i % 2 == 0: pass # 2.
@@ -19,35 +16,25 @@ for i in range(50):
         if i > 10: break # 4.
     print(i, end=' > ') # 注意縮排的位置
 print("end")
-</pre>
+```
    
 output：
-<pre>
-    start > 0 > 2 > 4 > 6 > 8 > 10 > end
-</pre>
-</details>
-    
-<details>
-<summary>Variable Argument</summary>
 
-#### 可變參數 
+    start > 0 > 2 > 4 > 6 > 8 > 10 > end
+
+### Variable Argument
+可變參數 
     
 + ___\*args___ &emsp; Arguments: 將參數收蒐集到tuple中 
 + ___\*\*kwargs___ &emsp; Keyword Arguments: 將參數收蒐集到dict中
 
 >\*args then \*\*kwargs &emsp; 在 ___def___ 函式中, 需先放開放參數, 再接預設參數
 
-</details>
-    
-<details>
-<summary> Copy </summary>
+### Copy
 
 由append、extend所帶出的議題, 探討深拷貝、淺拷貝
 
-</details>
-    
-<details>
-<summary>Set</summary>
+### Set
     
 #### 新增
 ```python
@@ -75,11 +62,8 @@ x ^ y : 對稱差集, 包含x, y不重複的元素
 x.issubset(y): 子集判斷, x是否是y的子集
 y.issuperset(x): 超集判斷
 ```
-    
-</details>
-    
-<details>
-<summary>List</summary>
+
+### List
     
 __init__
 
@@ -115,11 +99,8 @@ y.count('Bill') # 1
 
 ```python
 ```
-    
-</details>
-    
-<details>
-<summary>Type conversion</summary>
+
+### Type conversion
     
 #### 格式轉換
 ***numpy.ndarray***
@@ -141,20 +122,14 @@ array = series.values
 
 > 查找速度 dict > list
 
-</details>   
-    
-<details>
-<summary> Method </summary>
+### Method
     
 @classmethod, 類方法
 
 @staticmethod, 靜態方法
 
-</details>
-    
-<details>
-<summary> Magic Methods </summary>
-    
+### Magic Methods
+
 #### Initialization and Construction
 *\_\_new__(cls, other)* &emsp; 當對象實例化時調用
 *\_\_init__(self, other)* &emsp; 被*\_\_new__*方法調用
@@ -196,25 +171,20 @@ print(where_is['o'])
 ```
 *\_\_iter__* &emsp; 迭代
 
-</details>
-
-<details>
-<summary> Decorator </summary>
+### Decorator
 
 前半段表現不一樣但後半段一樣, 用修飾(不同, 同)
 ```python
     還沒什麼心得
 ```
-</details>
-<details>
-<summary> Inheritance </summary>
+
+### Inheritance
 
 前半段表現一樣但後半段不一樣, 用繼承(同, 不同)
 ```python
     還沒什麼心得
 ```
-    
-</details>
+
 
 
 
