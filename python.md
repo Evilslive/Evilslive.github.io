@@ -171,6 +171,11 @@ print(where_is['o'])
 ```
 *\_\_iter__* &emsp; 迭代
 
+*\_\_all__* &emsp; 
+雖然使用 "all" ,但真正的用意是「只有這些」; 
+當使用 <code> from module import * </code> 時, 寫有此方法的模組將只會導入all內寫明的類與方法
+, 限制list類型
+
 ### Decorator
 
 前半段表現不一樣但後半段一樣, 用修飾(不同, 同)
