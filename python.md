@@ -34,26 +34,82 @@ output：
 
 由append、extend所帶出的議題, 探討深拷貝、淺拷貝
 
-### Set
-    
-#### 新增
+### Data type
+
+##### \_\_init__
 ```python
+x = ['a','b']
+y = ['Tom','Bill']
+```
+
+##### 增
+```python
+# set
 y= set(1) or x= {2} # 建立集合
 y.add(2) # 新增元素 
 x = y.copy() # 拷貝 
+
+# dict
+y.setdefault("k", "v") # 將key, value新增到字典
+y.update({"k":"v"}) # 合併字典, 後蓋前
+
+# list
+x += ['c'] 
+x.append('d')
+x.extend(['e']) # x = ['a','b','c','d','e']
+
 ```
-#### 更新
+
+##### 刪
 ```python
-y.update(x) # 合併兩個集合
-```
-#### 刪除
-```python
+# set
 y.remove(2) # 移除元素, 找不到則KeyError
 y.discard(2) # 移出元素
 y.pop() # 擲出一個隨機元素, 為空則KeyError
 y.clear() # 清空集合
+
+# dict
+y.pop("k","v")
+y.popitem()
+y.clear()
+
+# list
+del x[0] # 'a'
+del x[-2] # 'd'
+x.pop(0) # 'b'
+x.pop() # 'e'
+x.remove('c') # []
+x.clear() # 清空 []
+
 ```
-#### 關係
+
+##### 查
+
+```python
+# set
+
+# dict
+y.get()
+
+# list
+y.index('Tom') # 0
+y.index('Bill',3,4), # ValueError: 'Bill' is not in list
+y.count('Bill') # 1
+
+```
+
+##### 改
+```python
+# set
+y.update(x) # 合併兩個集合
+
+# dict
+
+# list
+
+```
+
+##### 關係
 ```python
 x in y or x not in y: 元素包含判斷
 x | y : 聯集
@@ -63,42 +119,6 @@ x.issubset(y): 子集判斷, x是否是y的子集
 y.issuperset(x): 超集判斷
 ```
 
-### List
-    
-__init__
-
-```python
-x = ['a','b']
-y = ['Tom','Bill']
-```
-#### 增
-
-```python
-x += ['c'] 
-x.append('d')
-x.extend(['e']) # x = ['a','b','c','d','e']
-```
-#### 刪
-
-```python
-del x[0] # 'a'
-del x[-2] # 'd'
-x.pop(0) # 'b'
-x.pop() # 'e'
-x.remove('c') # []
-x.clear() # 清空 []
-```
-#### 查
-
-```python
-y.index('Tom') # 0
-y.index('Bill',3,4), # ValueError: 'Bill' is not in list
-y.count('Bill') # 1
-```
-#### 改
-
-```python
-```
 
 ### Type conversion
     
