@@ -52,6 +52,7 @@ x = y.copy() # 拷貝
 # dict
 y.setdefault("k", "v") # 將key, value新增到字典
 y.update({"k":"v"}) # 合併字典, 後蓋前
+z = {**x, **y} # 合併字典, ver3.5-
 
 # list
 x += ['c'] 
