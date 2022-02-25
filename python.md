@@ -211,6 +211,9 @@ print(where_is['o'])
     還沒什麼心得
 ```
 
+### Path
+
+相對路徑 與 絕對路徑, module 與 package
 
 
 
