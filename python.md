@@ -124,21 +124,29 @@ y.issuperset(x): 超集判斷
 ### Type conversion
     
 #### 格式轉換
-***numpy.ndarray***
+
+***list***
 ```python
-listA = array.tolist()
-array = numpy.array(listA)
+list_a = other_type.tolist()
+list_a = list(other_type)
 ```
-***pandas.Series***
+
+***numpy***
 ```python
-listA = series.tolist()
-series = pandas.series(listA)
+array_a = np.array(other_type)
+
+array_a = series_a.to_numpy()
+array_a = series_a.values
 ```
-np <-> pd
+
+***pandas***
 ```python
-series = pandas.Series(array)
-array = series.to_numpy()
-array = series.values
+series_a = pd.Series(other_type)
+```
+
+***tensorflow***
+```python
+constant_a = tf.constant(other_type)
 ```
 
 > 查找速度 dict > list
