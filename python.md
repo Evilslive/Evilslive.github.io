@@ -205,6 +205,16 @@ print(where_is['o'])
 當使用 <code> from module import * </code> 時, 寫有此方法的模組將只會導入all內寫明的類與方法
 , 限制list類型
 
+#### Descirptor
+
+描述器
+
+*\_\_get__(self, __obj: Any, __type: type | None)* &emsp;
+
+*\_\_set__(self, __obj: Any, __value: Any)* &emsp;
+
+*\_\_delete__(self, __obj: Any)* &emsp; 回收機制
+
 ### Decorator
 
 前半段表現不一樣但後半段一樣, 用修飾(不同, 同)
