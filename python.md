@@ -152,10 +152,14 @@ constant_a = tf.constant(other_type)
 > 查找速度 dict > list
 
 ### Method
-    
-@classmethod, 類方法
 
-@staticmethod, 靜態方法
+@property, 將方法當作參數、屬性調用(類裡須宣告__init__)
+
+不須實例化即可調用的修飾方法, 所在的類不須實例化即可使用
+
+@classmethod, 類方法(不需要self參數, 但需要指向自身類的cls參數)
+
+@staticmethod, 靜態方法(不需要self、cls參數)
 
 ### Magic Methods
 
