@@ -1,4 +1,18 @@
 
+### Web Server Gateway Interface,  WSGI
+
+#### Gunicorn 
+
+``` cmd
+gunicorn wsgi:app
+gunicorn --workers=4 wsgi:app
+gunicorn --bind=10.1.0.0:8080 wsgi:app
+```
+
+#### Werkzeug
+
+```
+```
 
 ### HTTP 請求方式
 
