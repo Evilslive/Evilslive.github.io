@@ -225,4 +225,4 @@ URI以永久更改, 請求方法將延續使用?
 > 511 Network Authentication Required (en-US)
 用戶端需獲得權限才能訪問
 
-[以上由MDN提供](https://developer.mozilla.org/zh-TW/)
+[以上由MDN頁面修改](https://developer.mozilla.org/zh-TW/)
