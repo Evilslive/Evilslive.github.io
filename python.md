@@ -22,6 +22,10 @@ output：
 
     start > 0 > 2 > 4 > 6 > 8 > 10 > end
 
+### Short Circut
+
+> 就直接用 and or 就好了, why & | ?
+
 ### Variable Argument
 可變參數 
     
@@ -148,6 +152,8 @@ series_a = pd.Series(other_type)
 ```python
 constant_a = tf.constant(other_type)
 ```
+
+> 可以加入 isdigit()、isnumerial()、isdecimal() # 但無法判斷float
 
 > 查找速度 dict > list
 
