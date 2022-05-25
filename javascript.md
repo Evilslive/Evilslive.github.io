@@ -19,3 +19,11 @@ long polling
 
 `based on ES6`
 
+
+### Prototype Pollution
+
+``` js
+let dict = Object.create(null) // 創造一個空的物件 {}, 物件裡沒有 __proto__ 這個key
+let dict = new Object() // 創造一個新物件, 但還沒有內容, 可以汙染 __proto__
+```
+
