@@ -56,7 +56,7 @@ Fast Common Gateway Interface
 
 ### HTTP 狀態碼
 
-#### 資訊回應
+#### 1xx 資訊回應
 
 > 100 Continue
 此臨時回應表明，目前為止的一切完好，而用戶端應當繼續完成請求、或是在已完成請求的情況下，忽略此資訊。
@@ -70,7 +70,7 @@ Fast Common Gateway Interface
 > 103 Early Hints (en-US)
 此狀態碼主要與 Link (en-US) 標頭有關：它能讓用戶代理（user agent）能在伺服器準備回應前能 preloading (en-US) 資源。
 
-#### 成功回應
+#### 2xx 成功回應
 
 > 200 OK
 請求成功。
@@ -102,7 +102,7 @@ Fast Common Gateway Interface
 > 226 IM Used (HTTP Delta encoding)
 已完成GET請求?
 
-#### 重定向訊息
+#### 3xx 重定向訊息
 
 > 300 Multiple Choice
 請求擁有一個以上的回應。用戶代理或使用者應該從中選一。不過，並沒有標準的選擇方案。
@@ -131,7 +131,7 @@ Fast Common Gateway Interface
 > 308 Permanent Redirect (en-US)
 URI以永久更改, 請求方法將延續使用?
 
-#### 用戶端錯誤回應
+#### 4xx 用戶端錯誤回應
 
 > 400 Bad Request (en-US)
 此回應意味伺服器因為收到無效語法，而無法理解請求。
@@ -222,7 +222,7 @@ URI以永久更改, 請求方法將延續使用?
 > 451 Unavailable For Legal Reasons
 用戶端請求違法的資源，例如受政府審查的網頁。
 
-#### 伺服器端錯誤回應
+#### 5xx 伺服器端錯誤回應
 
 > 500 Internal Server Error
 伺服器端發生未知或無法處理的錯誤。
