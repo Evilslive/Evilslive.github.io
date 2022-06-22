@@ -22,20 +22,22 @@ Fast Common Gateway Interface
 ###### python設定
 2. pip install wfastcgi
    * 啟用功能cmd輸入 ```wfastcgi-enable```
-   * 將 site-package 裡的 ```wfastcgi.py``` 複製到 ```PYTHONPATH``` 路徑內 (第6點)
-4. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限 (待研究)
+   * 將 site-package 裡的 ```wfastcgi.py``` 複製到 ```PYTHONPATH``` 路徑內 (第<6>點)
+3. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限 (待研究)
    * ```icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"``` 
    * ```icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)" ``` 
 
 ###### windows設定
 1. 啟用Server CGI 功能
    * 程式集 > 開啟或關閉Windows功能 > Internet Information Servers > World Wide Web 服務 > 應用程式開發功能 > CGI
+2.
+3.
 4. 由 window server 開啟 IIS管理員 > 站台 > 新增網站 > 輸入網站資料夾的 *實體路徑*、設定 *連接阜* (iponfig 避免重複)
 5. 在站台內新增的網站 開啟 處理常式對應 > 新增對應模組, 要求路徑 * (表示本地路徑)、模組選 FastCgiModule, 要求限制 > 對應 > 取消 只有當要求對應到下列項目時才啟動處理常式
 6. 回到 本機IIS > FastCGI設定 > 剛剛設定的站台名 > 環境變數, 新增名稱與變數
    * ```PYTHONPATH```: 入口網站資料夾位置
    * ```WSGI_HANDLER```: 啟動程式名稱, 以flask為例通常是 程式名xxxx.app, 也就是 app=Flask(__name__)的路徑
-8. 在 應用程式區集 中, 找到對應的處理序 > 進階設定, 將 識別 修改為 LocalSystem
+7. 在 應用程式區集 中, 找到對應的處理序 > 進階設定, 將 識別 修改為 LocalSystem
 
 
 
