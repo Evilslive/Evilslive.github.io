@@ -17,7 +17,7 @@ gunicorn --bind=10.1.0.0:8080 wsgi:app
 #### FastCGI
 Fast Common Gateway Interface
 
-> Flask vs IIS 2019
+> Flask vs IIS 10
 
 ###### python設定
 2. pip install wfastcgi
