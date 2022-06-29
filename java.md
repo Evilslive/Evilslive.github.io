@@ -18,3 +18,34 @@
 雙鍊表
 
 
+
+## Java vs C#
+
+#### extends
+
+#### implements
+
+### Access Modifiers
+存取修飾詞
+
+> public
+
+
+> protected internal	
+
+
+> protected	
+
+
+> internal	
+
+
+> private protected	
+
+
+> private
+
+
+
+
+
