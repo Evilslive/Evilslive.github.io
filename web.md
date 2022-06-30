@@ -23,7 +23,7 @@ Fast Common Gateway Interface
 2. pip install wfastcgi
    * 啟用功能cmd輸入 ```wfastcgi-enable```
    * 將 site-package 裡的 ```wfastcgi.py``` 複製到 ```PYTHONPATH``` 路徑內 (第<6>點)
-3. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限 (待研究)
+3. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限
    * ```icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"``` 
    * ```icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)" ``` 
      <details>
@@ -34,7 +34,7 @@ Fast Common Gateway Interface
   
       /grant : 授予存取權限(取代), /grant[:-r]則新增
       
-      中間的IUSR為預設路徑 (可以網頁右鍵編輯權限)
+      中間的IUSR為預設路徑 (可以網頁右鍵編輯權限?)
       
       (OI) : 物件繼承, 套用在目錄上
   
