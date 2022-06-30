@@ -26,6 +26,23 @@ Fast Common Gateway Interface
 3. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限 (待研究)
    * ```icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"``` 
    * ```icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)" ``` 
+     <details>
+     <summary>關於 icacls </summary>
+      Windows Server 上的指令
+  
+      取代 cacls: 主要進行DACL, 顯示或修改指定目錄中檔案的存取控制清單
+  
+      /grant : 授予存取權限(取代), /grant[:-r]則新增
+      
+      中間的IUSR為預設路徑 (可以網頁右鍵編輯權限)
+      
+      (OI) : 物件繼承, 套用在目錄上
+  
+      (CI) : 容器繼承, 套用在目錄上
+  
+      (RX) : 讀取和執行存取權
+  
+     </details>
 
 ###### windows設定
 1. 啟用Server CGI 功能
