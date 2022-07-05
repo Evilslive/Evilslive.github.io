@@ -1,9 +1,9 @@
 
-### Web Server Gateway Interface,  WSGI
+## Web Server Gateway Interface,  WSGI
 
 #### Gunicorn 
 
-``` cmd
+```shell
 gunicorn wsgi:app
 gunicorn --workers=4 wsgi:app
 gunicorn --bind=10.1.0.0:8080 wsgi:app
@@ -21,11 +21,16 @@ Fast Common Gateway Interface
 
 ###### python設定
 2. pip install wfastcgi
-   * 啟用功能cmd輸入 ```wfastcgi-enable```
-   * 將 site-package 裡的 ```wfastcgi.py``` 複製到 ```PYTHONPATH``` 路徑內 (第<6>點)
+   * 啟用功能cmd輸入 `wfastcgi-enable`
+   * 將 site-package 裡的 `wfastcgi.py` 複製到 `PYTHONPATH` 路徑內 (第<6>點)
 3. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限
-   * ```icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"``` 
-   * ```icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)" ``` 
+   * ```shell
+        icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"
+     ``` 
+   * ```shell
+        icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)" 
+     ``` 
+     
      <details>
      <summary>關於 icacls </summary>
       Windows Server 上的指令
@@ -52,15 +57,20 @@ Fast Common Gateway Interface
 4. 由 window server 開啟 IIS管理員 > 站台 > 新增網站 > 輸入網站資料夾的 *實體路徑*、設定 *連接阜* (iponfig 避免重複)
 5. 在站台內新增的網站 開啟 處理常式對應 > 新增對應模組, 要求路徑 * (表示本地路徑)、模組選 FastCgiModule, 要求限制 > 對應 > 取消 只有當要求對應到下列項目時才啟動處理常式
 6. 回到 本機IIS > FastCGI設定 > 剛剛設定的站台名 > 環境變數, 新增名稱與變數
-   * ```PYTHONPATH```: 入口網站資料夾位置
-   * ```WSGI_HANDLER```: 啟動程式名稱, 以flask為例通常是 程式名xxxx.app, 也就是 app=Flask(__name__)的路徑
+   * `PYTHONPATH`: 入口網站資料夾位置
+   * `WSGI_HANDLER`: 啟動程式名稱, 以flask為例通常是 程式名xxxx.app, 也就是 app=Flask(__name__)的路徑
 7. 在 應用程式區集 中, 找到對應的處理序 > 進階設定, 將 識別 修改為 LocalSystem
+8. HTTP回應標頭 新增  名稱 `X-Frame-Options`: 值 `SAMEORIGIN`, 用以防Clickjacking(?)
+9. 防火牆新增輸入規則, 開放連接阜即可外部連線
+
+```shell
+netsh http # 可以進行 URL 保留專案和註冊, 實質上還未使用到(待研究)
+```
 
 
 
 
-
-### HTTP 請求方式
+## HTTP 請求方式
 
 #### GET >     請求展示指定資源。只應用於取得資料。
 #### HEAD >    請求與 GET 方法相同的回應，但它沒有回應主體(response body)。
