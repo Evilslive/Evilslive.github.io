@@ -22,14 +22,12 @@ Fast Common Gateway Interface
 ###### python設定
 2. pip install wfastcgi
    * 啟用功能cmd輸入 `wfastcgi-enable`
-   * 將 site-package 裡的 `wfastcgi.py` 複製到 `PYTHONPATH` 路徑內 (第<6>點)
+   * 將 site-package 裡的 `wfastcgi.py` 複製到 `PYTHONPATH` 路徑內 (項6)
 3. 在 ```PYTHONPATH``` 路徑下, 輸入下列指令開啟IIS用戶可以訪問網站腳本的權限
-   * ```shell
+   ```shell
         icacls . /grant "NT AUTHORITY\IUSR:(OI)(CI)(RX)"
-     ``` 
-   * ```shell
         icacls . /grant "Builtin\IIS_IUSRS:(OI)(CI)(RX)" 
-     ``` 
+   ``` 
      
      <details>
      <summary>關於 icacls </summary>
