@@ -25,6 +25,13 @@ What is manifest?
 + protected + internal : **聯集**, 組件或繼承都可以使用
 + private + protected : **交集**, 同組件&繼承內使用 (所以不需要再有 private internal)
 
+## 其他修飾詞
+
+#### abstract vs virtual
+抽象方法與虛擬方法
+
+#### const vs static readonly
+
 
 ## value types
 
