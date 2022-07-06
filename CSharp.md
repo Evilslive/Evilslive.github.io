@@ -1,5 +1,31 @@
 
 
+### assembly
+組件/元件, ex: exe、dll檔
+> 具有語言無關性
+
+What is manifest?
+
+### class
+類型
+
+## Access Modifiers
+存取修飾詞
+
+|   呼叫組件     |   呼叫位置   | public | private | private protected | protected | protected internal | internal |
+| -------------:| -----------:|:-------:|:-------:|:----------------:|:----------:|:------------------:|:--------:|
+|               | this class  |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+| same assembly | child class |:heavy_check_mark:|:x:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+|               | other class |:heavy_check_mark:|:x:|:x:|:x:|:heavy_check_mark:|:heavy_check_mark:|
+| diff assembly | child class |:heavy_check_mark:|:x:|:x:|:heavy_check_mark:|:heavy_check_mark:|:x:|
+|               | other class |:heavy_check_mark:|:x:|:x:|:x:|:x:|:x:|
+
++ protected : 只在繼承內使用 
++ internal : 只在同組件內使用
++ protected + internal : 聯集, 組件或繼承都可以使用
++ private + protected : 交集, 同組件的繼承內使用 (所以不需要再有 private internal)
+
+
 ## value types
 
 整數 (含零正: 範圍長度一樣, 但 中心位置=整數最大值, 故 max(整數)\*2 +1 == max(純正))
