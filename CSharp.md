@@ -69,14 +69,18 @@ NList[2] = "c";
 
 #### Array
 + 基型
-+ 連續儲存
-+ 僅限同類
++ 連續分配
++ 統一型別
+
+```cs
+```
 
 ## System.Collections
 
 #### ArrayList
 + 非型別安全: 錯誤的資料增刪, 可能導致型別不匹配報錯
-+ 長度可變
++ 連續分配
++ 不定長
 + 須裝箱拆箱: 物件化object後才放入或取出 (所以可以不同類混存)
 
 ```cs
@@ -91,20 +95,70 @@ AList[2] = "g"; // 改, 無法直接賦予長度外位置
 #### Queue
 + 先進先出
 
+```cs
+Queue<int> queue = new Queue<int>();
+queue.Enqueue(123); // 向對列新增元素
+queue.Dequeue(); // 取出最前頭的元素, 並由對列中移除
+queue.Peek(); // 複製(?)最前頭的元素, 但不移除
+```
+
 #### Stack
 + 先進後出
+
+```cs
+Stack<string> stack = new Stack<string>();
+stack.Push("A計畫"); // 新增元素
+stack.Push("B計畫");
+stack.Pop(); // 獲取最後進入的元素, 並由對列中移除
+stack.Peek(); // 獲取不移除
+```
 
 ## System.Collections.Generic
 
 #### List
 + ArrayList的泛型等化
-+ 型別安全
++ 統一型別
 + 長度可變
 + 因先宣告型別, 不須裝拆箱
 
+```cs
+```
 
 #### LinkedList
++分配不連續
 
+```cs
+```
+
+#### HashSet
+
+```cs
+```
+
+#### SortedSet
+
+```cs
+```
+
+#### HashTable
+
+```cs
+```
+
+#### Dictionary
+
+```cs
+```
+
+#### SortedDictionary
+
+```cs
+```
+
+#### SortedList
+
+```cs
+```
 
 
 
