@@ -49,4 +49,68 @@ What is manifest?
 
 > 有隱含的數字轉換規則
 
+<br>
+<br>
+<hr>
+或許先由命名空間整理
+
+## System
+
+#### 陣列 []
+
+```cs
+String[] NList = new string[3]; // 需宣告長度, 速度
+NList[0] = "a";
+NList[1] = "b";
+NList[2] = "c";
+// 「增」時固定長度, 不好「插」、「改」
+```
+
+
+#### Array
++ 基型
++ 連續儲存
++ 僅限同類
+
+## System.Collections
+
+#### ArrayList
++ 非型別安全: 錯誤的資料增刪, 可能導致型別不匹配報錯
++ 長度可變
++ 須裝箱拆箱: 物件化object後才放入或取出 (所以可以不同類混存)
+
+```cs
+ArrayList AList = new ArrayList(); // 可動態擴充, 長度可宣可不宣
+AList.Add("a"); // 增
+AList.InsertRange(0, new string[] {"x", "b", "u"}); // 插
+AList.RemoveAt(0); // 刪, 縮減長度
+AList[2] = "g"; // 改, 無法直接賦予長度外位置
+// 查
+```
+
+#### Queue
++ 先進先出
+
+#### Stack
++ 先進後出
+
+## System.Collections.Generic
+
+#### List
++ ArrayList的泛型等化
++ 型別安全
++ 長度可變
++ 因先宣告型別, 不須裝拆箱
+
+
+#### LinkedList
+
+
+
+
+
+
+
+
+
 
