@@ -80,6 +80,54 @@ netsh http # 可以進行 URL 保留專案和註冊, 實質上還未使用到(�
 #### TRACE >   與指定資源標明的伺服器之間，執行迴路返回測試（loop-back test）。
 #### PATCH >   用指定資源的部份修改。
 
+#### 發送
+
+python
+```python
+import json
+import requests
+url = 'http://127.0.0.1:5000'
+data = {"Q":"A"}
+data = json.dumps(data)
+reqs = requests.post(url, data=data)
+
+```
+
+js
+```js
+$.ajax({
+    type: 'POST',
+    url: 'http://127.0.0.1:5000',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify({ "Q": "A" }),
+})
+  .then(
+    function(){
+  })
+  .fail(
+    function(){
+  });
+
+fetch(url, 
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ "Q": "A" }),
+  })
+  .then(response => {
+    // 先回傳資料或進行status判斷
+    return response.json()
+  })
+  .then(data =>{
+  })
+  .catch(error=>{
+  });
+```
+
+#### 接收
+
+```python
+```
 
 ### HTTP 狀態碼
 
