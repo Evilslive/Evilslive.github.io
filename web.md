@@ -61,6 +61,10 @@ Fast Common Gateway Interface
 8. HTTP回應標頭 新增  名稱 `X-Frame-Options`: 值 `SAMEORIGIN`, 用以防Clickjacking(?)
 9. 防火牆新增輸入規則, 開放連接阜即可外部連線
 
+```python
+app.config['SESSION_COOKIE_SECURE'] = True # session限制於https使用
+```
+
 ```shell
 netsh http # 可以進行 URL 保留專案和註冊, 實質上還未使用到(待研究)
 ```
