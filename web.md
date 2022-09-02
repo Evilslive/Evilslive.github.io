@@ -47,7 +47,7 @@ Fast Common Gateway Interface
   
      </details>
 
-4. flask `app.config` key的設定:
+flask `app.config` key的設定:
     + PERMANENT_SESSION_LIFETIME：設置 session 的效期，單位是秒。默認 Session 是永久，當 session.permanent 為 True 時才會套用。
     + SESSION_COOKIE_SECURE: True時只在 HTTPS 發送，默認為 False。
 
