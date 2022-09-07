@@ -76,8 +76,10 @@ dotnet add package <name>
 String[] NList = new string[3]; // 需宣告長度, 速度
 NList[0] = "a";
 NList[1] = "b";
-NList[2] = "c";
+NList[2] = "c"; // 等同NList[^0] or NList[NList.length]
 // 「增」時固定長度, 不好「插」、「改」
+// 以 .. 來遍歷陣列
+NList[0..^0] 
 ```
 
 
