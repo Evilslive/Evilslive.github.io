@@ -52,6 +52,20 @@ What is manifest?
 <br>
 <br>
 <hr>
+
+## CommandLine
+指令集
+
+```cmd
+dotnet run
+dotnet test 
+dotnet list package
+dotnet add package <name>
+```
+
+<br>
+<br>
+<hr>
 或許先由命名空間整理
 
 ## System
