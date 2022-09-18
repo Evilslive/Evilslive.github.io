@@ -57,6 +57,7 @@ What is manifest?
 指令集
 
 ```cmd
+dotnet new <template>
 dotnet run
 dotnet test 
 dotnet list package
