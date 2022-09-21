@@ -70,6 +70,11 @@ flask `app.config` key的設定:
 netsh http # 可以進行 URL 保留專案和註冊, 實質上還未使用到(待研究)
 ```
 
+## IIS
+
+### Warm Up
+新增角色:應用程式初始化 > 網站/進階設定/預先載入已啟用: True > 對應的應用程式區集/啟動模式: AlwaysRunning
+
 
 ## HTTP 請求方式
 
