@@ -10,6 +10,7 @@
 
 ## PyAutoGui
 
+```python
 def screening(path:str, file_extension:str="", current_floor:bool=False)->list:
     ''' 掃描指定位置的特定格式檔案, 返回 路徑+檔名, BFS?
         path: 路徑
@@ -30,3 +31,4 @@ def screening(path:str, file_extension:str="", current_floor:bool=False)->list:
         if current_floor: break
 
     return result
+```
