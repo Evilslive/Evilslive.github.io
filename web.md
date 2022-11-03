@@ -267,9 +267,11 @@ fetch(url,
 
 > 301 Moved Permanently
 此回應碼的意思是，請求資源的 URI 已被改變。有時候，會在回應內給予新的 URI。
+>> 永久轉址
 
 > 302 Found (en-US)
 請求的URI已暫時改變了, 正在等待完成?
+>> 暫時轉址
 
 > 303 See Other (en-US)
 伺服器傳送請求到其他位址, 以取得URI與GET資源
