@@ -393,7 +393,11 @@ URI以永久更改, 請求方法將延續使用?
 
 > 500 Internal Server Error
 伺服器端發生未知或無法處理的錯誤。
-
+>> .19 Internal Server Error. 可能是 ApplicationHost.config 或 Web.config 格式不正確或有未識別的XML元素; 或IIS上子父有重複的定義
+>>
+>> .52 URL Rewrite Module Error. 也是父層級被鎖定的原因, 釋放資源或重啟IIS
+>>
+  
 > 501 Not Implemented (en-US)
 請求方法不支持 (GET, HEAD)?
 
