@@ -16,9 +16,25 @@
 #### 5NF
 
 
-
-
-
 ```sql
 TRUNCATE TABLE 表單名; /*清空表單*/
 ```
+
+## SQL連線障礙排除
+
+### SSCM
+服務啟用
+Configuration Tools 》Sql Server Configuration Manager 》SQL Server 》Running
+
+TCP/IP開啟
+Sql Server Configuration Manager 》 Sql Server Network Configuration 》TCP/IP 》Enabled
+
+TCP/IP上按右鍵, 在IP ADRESS 最下面一項 IP ALL 0為動態, 設定完成後重啟可以看的取得的值
+
+### SSMS
+選資料庫的Management 》SQL Server Log, 查詢連線狀況
+
+如果出現Sql Error 18456，表示沒有開啟Mixed Mode（混合驗證模式）
+
+選擇資料庫》Properties 》Security 》Sql Server and Windows Authentication Mode , 重新啟動
+
