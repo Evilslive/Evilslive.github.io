@@ -57,13 +57,15 @@ flask `app.config` key的設定:
 2.
 3.
 4. 由 window server 開啟 IIS管理員 > 站台 > 新增網站 > 輸入網站資料夾的 *實體路徑*、設定 *連接阜* (iponfig 避免重複)
-5. 在站台內新增的網站 開啟 處理常式對應 > 新增對應模組, 要求路徑 * (表示本地路徑)、模組選 FastCgiModule, 要求限制 > 對應 > 取消 只有當要求對應到下列項目時才啟動處理常式
-6. 回到 本機IIS > FastCGI設定 > 剛剛設定的站台名 > 環境變數, 新增名稱與變數
+5. 設定 處理常式對應 開啟 > 新增模組對應 > 要求路徑:* (表示本地路徑)、模組:FastCgiModule, 取消要求限制:只有當要求對應到下列項目時才啟動處理常式
+   * 伺服器: 在站台內新增的網站, 執行檔:python.exe路徑|python內wfastcgi.py路徑
+   * 站台: 新增的站台(網站), 執行檔:python.exe路徑|網頁路徑內的wfastcgi.py
+7. 回到 本機IIS > FastCGI設定 > 剛剛設定的站台名 > 環境變數, 新增名稱與變數
    * `PYTHONPATH`: 入口網站資料夾位置, 含有wfastcgi.py的位置(注意不是安裝路徑C)
    * `WSGI_HANDLER`: 啟動程式名稱, 以flask為例通常是 程式名xxxx.app, 也就是 app=Flask(__name__)的路徑
-7. 在 應用程式區集 中, 找到對應的處理序 > 進階設定, 將 識別 修改為 LocalSystem
-8. HTTP回應標頭 新增  名稱 `X-Frame-Options`: 值 `SAMEORIGIN`, 用以防Clickjacking(?)
-9. 防火牆新增輸入規則, 開放連接阜即可外部連線
+8. 在 應用程式區集 中, 找到對應的處理序 > 進階設定, 將 識別 修改為 LocalSystem
+9. HTTP回應標頭 新增  名稱 `X-Frame-Options`: 值 `SAMEORIGIN`, 用以防Clickjacking(?)
+10. 防火牆新增輸入規則, 開放連接阜即可外部連線
 
 
 ```shell
