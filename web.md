@@ -54,6 +54,7 @@ flask `app.config` key的設定:
 ###### windows設定
 1. 啟用Server CGI 功能
    * 程式集 > 開啟或關閉Windows功能 > Internet Information Servers > World Wide Web 服務 > 應用程式開發功能 > CGI
+   > 檢查 功能檢視:FastCgi檢視、模組:FastCgiModule
 2.
 3.
 4. 由 window server 開啟 IIS管理員 > 站台 > 新增網站 > 輸入網站資料夾的 *實體路徑*、設定 *連接阜* (iponfig 避免重複)
